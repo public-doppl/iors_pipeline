@@ -1,0 +1,11 @@
+.dockerignore
+.docker
+
+*/__pycache__/
+**/__pycache__/
+
+data/input/*
+data/output/*
+
+.DS_Store
+*.DS_Store
