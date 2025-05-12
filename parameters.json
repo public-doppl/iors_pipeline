@@ -1,7 +1,7 @@
 [
     {
-        "input_folder":"/app/data/input/",
-        "input_spreadsheet":"Phase2_Rep1.csv",
-        "output_folder":"/app/data/output/"
+        "input_folder": "./data/input",
+        "input_spreadsheet": "dataset1.xlsx",
+        "output_folder": "./data/output"
     }
 ]
