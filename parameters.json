@@ -1,7 +1,12 @@
 [
     {
         "input_folder": "./data/input",
-        "input_spreadsheet": "dataset1.xlsx",
+        "input_spreadsheet": "BF_features_Rep1.csv",
+        "output_folder": "./data/output"
+    },
+    {
+        "input_folder": "./data/input",
+        "input_spreadsheet": "BF_features_Rep2.csv",
         "output_folder": "./data/output"
     }
 ]
