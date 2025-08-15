@@ -127,12 +127,11 @@ if __name__ == '__main__':
     pivot_dataset = Preprocessing.preprocess_dataset(raw_dataset)
 
     ### Computing IORS
-    IORS_dataset = compute_recovery_score(pivot_dataset)
+    IORS_dataset = compute_recovery_score(pivot_dataset).reset_index()
     IO.save_dataframe(IORS_dataset, spreadsheets_folder, f"{args.input_spreadsheet.split('.')[0]}_IORS.csv")
 
     ### Plotting results for main conditions of interest
-    IORS_dataset_selected_conditions = IORS_dataset.reset_index()
-    IORS_dataset_selected_conditions = IORS_dataset_selected_conditions[IORS_dataset_selected_conditions['Condition'].isin(config.IORS_TEST_CONDITIONS)]
-    
+    IORS_dataset_selected_conditions = IORS_dataset[IORS_dataset['Condition'].isin(config.IORS_TEST_CONDITIONS)]
+
     Visualization.plot_recovery_score_boxplot(IORS_dataset_selected_conditions, visualization_folder, output_prefix=f"{args.input_spreadsheet.split('.')[0]}_")
 

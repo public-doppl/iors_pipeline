@@ -30,7 +30,7 @@ Make sure to provide your input dataset in the corresponding folder.
 ## Building the Docker image
 To build the Docker image, navigate to the root directory of the repository (where the Dockerfile is located) and run the following command:
 ```bash
-docker build -t iors_pipeline 
+docker build -t iors_pipeline .
 ```
 * *iors_pipeline* is the name of the Docker image. You can replace it with any name you prefer.
 
